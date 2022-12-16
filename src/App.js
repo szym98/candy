@@ -5,6 +5,9 @@ import green from './images/green.png'
 import orange from './images/orange.png'
 import red from './images/red.png'
 import blank from './images/blank.png'
+import { Typography } from 'antd';
+
+const { Title } = Typography;
 const width = 8
 const candyColors=[
     green,
@@ -226,7 +229,7 @@ const App = () => {
                 ))}
             </div>
             {/* <Score score={scoreDisplay}/> */}
-            <h1 className="score">Score: {scoreDisplay}</h1>
+            <Title className="score">Score: {scoreDisplay}</Title>
         </div>
     )
 

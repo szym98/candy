@@ -6,6 +6,8 @@
   display: flex;
   justify-content: space-around;
   padding: 30px;
+
+
 }
 
 .game {
@@ -13,12 +15,17 @@
   height: 560px;
   display: flex;
   flex-wrap: wrap;
-}
+  border: 3px solid ;
 
+}
 .score {
   text-align: end;
   font-size: 50px;
+  padding-right: 10px;
+  height: 80px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
 }
+
 
 .game img {
   width: 70px;
