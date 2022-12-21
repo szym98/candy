@@ -22,6 +22,7 @@ const App = () => {
     const [squareBeingDragged, setSquareBeingDragged] = useState(null)
     const [squareBeingReplaced, setSquareBeingReplaced] = useState(null)
     const [scoreDisplay, setScoreDisplay] = useState(0)
+    const [timing, setTiming] = useState(time)
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const checkForColumnOfFive = useCallback (() => {
