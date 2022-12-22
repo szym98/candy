@@ -15,7 +15,7 @@ const candyColors=[
     orange,
     red
 ]
-const time=30
+
 
 const App = () => {
     const [currentColorArrangement, setCurrentColorArrangement] = useState([])
