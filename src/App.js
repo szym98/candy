@@ -9,7 +9,7 @@ import { Typography } from 'antd';
 
 const { Title } = Typography;
 const width = 8
-const TimeLeft=0
+const times=0
 let result = 0
 const candyColors=[
     green,
@@ -45,7 +45,7 @@ const App = () => {
         // eslint-disable-next-line no-const-assign
        currentTime --
         let timerId = null
-        TimeLeft.textContent = currentTime
+        times.textContent = currentTime
 
 
         if (currentTime === 0) {
@@ -53,8 +53,9 @@ const App = () => {
             clearInterval(timerId)
             alert('GAME OVER! Your final score is ' + result)
 
-        }
 
+        }
+ currentTime.render(time)
     }
 
     let countDownTimerId = setInterval(time, 1000)
@@ -252,7 +253,8 @@ const App = () => {
             </div>
             {/* <Score score={scoreDisplay}/> */}
             <Title className="score">Score: {scoreDisplay}</Title>
-            <h2 id="time-left">60</h2>
+            {/* <Time ={scoreDisplay}/> */}
+            <h2 id="times">60</h2>
 
 
         </div>
