@@ -24,7 +24,8 @@ const App = () => {
     const [squareBeingDragged, setSquareBeingDragged] = useState(null)
     const [squareBeingReplaced, setSquareBeingReplaced] = useState(null)
     const [scoreDisplay, setScoreDisplay] = useState(0)
-    let [currentTime]=useState(60)
+    const [currentTime, setCurrentTime]=useState(60)
+
 
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -41,27 +42,18 @@ const App = () => {
             }
         }
     })
-    const time=()=>{
-        // eslint-disable-next-line no-const-assign
-       currentTime --
-        let timerId = null
-        times.textContent = currentTime
 
 
-        if (currentTime === 0) {
-            clearInterval(countDownTimerId)
-            clearInterval(timerId)
-            alert('GAME OVER! Your final score is ' + result)
-
-
+    useEffect(() => {
+        if(currentTime>0) {
+            setTimeout(() => setCurrentTime(currentTime - 1), 1000);
+        } else if(currentTime === 0) {
+            setCurrentTime(0);
+            setTimeout(() => alert('GAME OVER'), 1000);
         }
- currentTime.render(time)
-    }
+    }, [currentTime]);
 
-    let countDownTimerId = setInterval(time, 1000)
-
-
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const checkForRowOfFive = useCallback(() => {
         for (let i = 0; i < 64; i++) {
             const rowOfFive = [i, i + 1, i + 2, i + 3, i + 4]
@@ -254,7 +246,7 @@ const App = () => {
             {/* <Score score={scoreDisplay}/> */}
             <Title className="score">Score: {scoreDisplay}</Title>
             {/* <Time ={scoreDisplay}/> */}
-            <h2 id="times">60</h2>
+            <h2 id="times">{currentTime}</h2>
 
 
         </div>
