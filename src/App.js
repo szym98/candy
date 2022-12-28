@@ -10,7 +10,6 @@ import { Typography } from 'antd';
 const { Title } = Typography;
 const width = 8
 const times=0
-let result = 0
 const candyColors=[
     green,
     blue,
@@ -44,14 +43,15 @@ const App = () => {
     })
 
 
+
     useEffect(() => {
         if(currentTime>0) {
             setTimeout(() => setCurrentTime(currentTime - 1), 1000);
         } else if(currentTime === 0) {
             setCurrentTime(0);
-            setTimeout(() => alert('GAME OVER'), 1000);
+            setTimeout(() => alert('GAME OVER ' + scoreDisplay), 1000);
         }
-    }, [currentTime]);
+    }, [currentTime, scoreDisplay]);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const checkForRowOfFive = useCallback(() => {
