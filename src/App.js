@@ -243,11 +243,13 @@ const App = () => {
                     />
                 ))}
             </div>
+          <div className="back">
+              {/* <Time ={scoreDisplay}/> */}
+              <h2 id="times"> Time: {currentTime} </h2>
             {/* <Score score={scoreDisplay}/> */}
             <Title className="score">Score: {scoreDisplay}</Title>
-            {/* <Time ={scoreDisplay}/> */}
-            <h2 id="times"> Time: {currentTime} </h2>
 
+                </div>
 
         </div>
 
