@@ -9,7 +9,7 @@ import { Typography } from 'antd';
 
 const { Title } = Typography;
 const width = 8
-const times=0
+
 const candyColors=[
     green,
     blue,
