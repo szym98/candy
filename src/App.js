@@ -49,7 +49,7 @@ const App = () => {
             setTimeout(() => setCurrentTime(currentTime - 1), 1000);
         } else if(currentTime === 0) {
             setCurrentTime(0);
-            setTimeout(() => alert('GAME OVER ' + scoreDisplay), 1000);
+            setTimeout(() => alert('GAME OVER Your score is ' + scoreDisplay), 1000);
         }
     }, [currentTime, scoreDisplay]);
 
@@ -246,7 +246,7 @@ const App = () => {
             {/* <Score score={scoreDisplay}/> */}
             <Title className="score">Score: {scoreDisplay}</Title>
             {/* <Time ={scoreDisplay}/> */}
-            <h2 id="times">{currentTime}</h2>
+            <h2 id="times"> Time: {currentTime} </h2>
 
 
         </div>
