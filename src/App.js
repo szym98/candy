@@ -9,6 +9,8 @@ import { Typography } from 'antd';
 
 const { Title } = Typography;
 const width = 8
+const TimeLeft=0
+let result = 0
 const candyColors=[
     green,
     blue,
@@ -22,6 +24,7 @@ const App = () => {
     const [squareBeingDragged, setSquareBeingDragged] = useState(null)
     const [squareBeingReplaced, setSquareBeingReplaced] = useState(null)
     const [scoreDisplay, setScoreDisplay] = useState(0)
+    let [currentTime]=useState(60)
 
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -38,8 +41,26 @@ const App = () => {
             }
         }
     })
+    const time=()=>{
+        // eslint-disable-next-line no-const-assign
+       currentTime --
+        let timerId = null
+        TimeLeft.textContent = currentTime
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
+        if (currentTime === 0) {
+            clearInterval(countDownTimerId)
+            clearInterval(timerId)
+            alert('GAME OVER! Your final score is ' + result)
+
+        }
+
+    }
+
+    let countDownTimerId = setInterval(time, 1000)
+
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     const checkForRowOfFive = useCallback(() => {
         for (let i = 0; i < 64; i++) {
             const rowOfFive = [i, i + 1, i + 2, i + 3, i + 4]
@@ -231,7 +252,13 @@ const App = () => {
             </div>
             {/* <Score score={scoreDisplay}/> */}
             <Title className="score">Score: {scoreDisplay}</Title>
+            <h2 id="time-left">60</h2>
+
+
         </div>
+
+
+
     )
 
 }
