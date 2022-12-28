@@ -46,10 +46,10 @@ const App = () => {
 
     useEffect(() => {
         if(currentTime>0) {
-            setTimeout(() => setCurrentTime(currentTime - 1), 1000);
+            setTimeout(() => setCurrentTime(currentTime - 1), 800);
         } else if(currentTime === 0) {
             setCurrentTime(0);
-            setTimeout(() => alert('GAME OVER Your score is ' + scoreDisplay), 1000);
+            setTimeout(() => alert('GAME OVER Your score is ' + scoreDisplay), 800);
         }
     }, [currentTime, scoreDisplay]);
 
