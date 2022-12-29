@@ -1,12 +1,12 @@
-* {
-  background-color:honeydew;
 
-}
+
+
 
 .app {
   display: flex;
   justify-content: space-around;
   padding: 30px;
+  background-color: white;
 
 
 }
@@ -17,6 +17,8 @@
   display: flex;
   flex-wrap: wrap;
   border: 3px solid ;
+  background-color: lightyellow;
+
 
 }
 .score {
@@ -34,8 +36,8 @@
   padding-right: 10px;
   height: 80px;
   box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px, rgb(51, 51, 51) 0 0 0 3px;
-  border-radius: 20px;
-  border:solid 10px;
+  display: flex;
+  position: relative;
 
 
 
@@ -46,6 +48,8 @@
   .back{
     display: flex;
     flex-direction: column;
+
+    height: 10%;
   }
 
 
