@@ -1,0 +1,2 @@
+.app{background-color:#fff;justify-content:space-around;padding:30px}.app,.game{display:flex}.game{background-color:#ffffe0;border:3px solid;flex-wrap:wrap;height:560px;width:560px}.score,.time{box-shadow:0 1px 4px rgba(0,0,0,.16),0 0 0 3px #333;display:flex;font-size:50px;height:80px;padding-right:10px;position:relative;text-align:end}.back{display:flex;flex-direction:column;height:10%}.game img{height:70px;width:70px}
+/*# sourceMappingURL=main.f481803c.css.map*/
