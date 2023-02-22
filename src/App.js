@@ -1,5 +1,6 @@
+
+
 import {useEffect, useState} from 'react'
-import {useCallback} from 'react'
 import blue from './images/blue.png'
 import green from './images/green.png'
 import orange from './images/orange.png'
@@ -28,7 +29,7 @@ const App = () => {
 
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const checkForColumnOfFive = useCallback (() => {
+    const checkForColumnOfFive = () => {
         for (let i = 0; i < 32; i++) {
             const columnOfFive = [i, i + width, i + width * 2, i + width * 3, i + width * 4]
             const decidedColor = currentColorArrangement[i]
@@ -40,7 +41,7 @@ const App = () => {
                 return true
             }
         }
-    })
+    }
 
 
 
@@ -54,7 +55,7 @@ const App = () => {
     }, [currentTime, scoreDisplay]);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const checkForRowOfFive = useCallback(() => {
+    const checkForRowOfFive = () => {
         for (let i = 0; i < 64; i++) {
             const rowOfFive = [i, i + 1, i + 2, i + 3, i + 4]
             const decidedColor = currentColorArrangement[i]
@@ -69,10 +70,11 @@ const App = () => {
                 return true
             }
         }
-    })
+    }
+
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const checkForColumnOfFour = useCallback(() => {
+    const checkForColumnOfFour =() => {
         for (let i = 0; i < 40; i++) {
             const columnOfFour = [i, i + width, i + width * 2, i + width * 3]
             const decidedColor = currentColorArrangement[i]
@@ -84,10 +86,10 @@ const App = () => {
                 return true
             }
         }
-    })
+    }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const checkForRowOfFour = useCallback(() => {
+    const checkForRowOfFour = () => {
         for (let i = 0; i < 64; i++) {
             const rowOfFour = [i, i + 1, i + 2, i + 3]
             const decidedColor = currentColorArrangement[i]
@@ -102,10 +104,10 @@ const App = () => {
                 return true
             }
         }
-    })
+    }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const checkForColumnOfThree = useCallback(() => {
+    const checkForColumnOfThree = () => {
         for (let i = 0; i < 48; i++) {
             const columnOfThree = [i, i + width, i + width * 2]
             const decidedColor = currentColorArrangement[i]
@@ -117,10 +119,10 @@ const App = () => {
                 return true
             }
         }
-    })
+    }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const checkForRowOfThree = useCallback(() => {
+    const checkForRowOfThree = () => {
         for (let i = 0; i < 64; i++) {
             const rowOfThree = [i, i + 1, i + 2]
             const decidedColor = currentColorArrangement[i]
@@ -135,7 +137,7 @@ const App = () => {
                 return true
             }
         }
-    })
+    }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const moveIntoSquareBelow = () => {
@@ -243,13 +245,13 @@ const App = () => {
                     />
                 ))}
             </div>
-          <div className="back">
-              {/* <Time ={scoreDisplay}/> */}
-              <h2 id="times"> Time: {currentTime} </h2>
-            {/* <Score score={scoreDisplay}/> */}
-            <Title className="score">Score: {scoreDisplay}</Title>
+            <div className="back">
+                {/* <Time ={scoreDisplay}/> */}
+                <h2 id="times"> Time: {currentTime} </h2>
+                {/* <Score score={scoreDisplay}/> */}
+                <Title className="score">Score: {scoreDisplay}</Title>
 
-                </div>
+            </div>
 
         </div>
 
