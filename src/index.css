@@ -45,11 +45,11 @@
 }
 
 
-  .back{
-    display: flex;
-    flex-direction: column;
-    height: 10%;
-  }
+.back{
+  display: flex;
+  flex-direction: column;
+  height: 10%;
+}
 
 
 

@@ -1,5 +1,3 @@
-
-
 import {useEffect, useState} from 'react'
 import blue from './images/blue.png'
 import green from './images/green.png'
